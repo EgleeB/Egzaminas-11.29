@@ -6,7 +6,7 @@
 :root {
   --font-family-main: Arial, Helvetica, sans-serif;
   --font-color: rgb(236, 114, 134);
-  --padding-main: 2% 5%;
+  --padding-main: 5% 10%;
 }
 
 /* HEADER */
@@ -44,10 +44,12 @@ header img {
   flex-direction: row;
   justify-content: space-between;
   padding: var(--padding-main);
+  background-image: url(./assets/graphic.png);
+  background-size: 80%;
+  background-position: right;
+  background-repeat: no-repeat;
 }
-#section-about img {
-  max-height: 100%;
-}
+
 #about-info {
   width: 40%;
   display: flex;
@@ -84,7 +86,7 @@ button:hover {
     rgb(131, 218, 240),
     rgb(43, 58, 121)
   );
-  padding: 10% 5%;
+  padding: 10% 10%;
   display: flex;
   flex-direction: column;
 }
@@ -100,9 +102,8 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-}
-#section-images img {
   padding: var(--padding-main);
+  column-gap: 5%;
 }
 
 #section-images img:nth-child(5) {
@@ -167,4 +168,16 @@ td {
   height: 2px;
   width: 100%;
   margin: 0 auto;
+}
+#section-about-last {
+  height: 400px;
+  font-family: var(--font-family-main);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--padding-main);
+  background-image: url(./assets/upsell-footer-image.svg);
+  background-size: 40%;
+  background-position: right;
+  background-repeat: no-repeat;
 }

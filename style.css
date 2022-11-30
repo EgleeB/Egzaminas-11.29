@@ -83,6 +83,7 @@ button:hover {
   background-image: linear-gradient(
     to right,
     rgb(217, 51, 51),
+    orange,
     rgb(112, 234, 82)
   );
   padding: 10% 10%;
@@ -234,6 +235,10 @@ em {
   text-decoration: none;
   font-style: normal;
 }
+#launch-date em:nth-child(2) {
+  display: none;
+}
+
 @media only screen and (min-width: 992px) {
   #section-about {
     background-size: 50%;
@@ -282,5 +287,14 @@ em {
   #right-footer {
     width: 40%;
     padding: var(--padding-main);
+  }
+
+  #launch-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #launch-date em:nth-child(2) {
+    display: flex;
   }
 }

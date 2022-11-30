@@ -102,8 +102,12 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding: var(--padding-main);
   column-gap: 5%;
+  padding: var(--padding-main);
+  justify-items: center;
+}
+#section-images img {
+  width: 90%;
 }
 
 #section-images img:nth-child(5) {

@@ -211,7 +211,6 @@ button:hover {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   grid-auto-flow: row;
   padding: var(--padding-main);
 
@@ -269,7 +268,20 @@ em {
   }
 
   /*SECOND INFO SECTION*/
-}
-#section-about-last {
-  background-size: 20%;
+
+  #section-about-last {
+    background-size: 20%;
+  }
+  #social-media {
+    display: flex;
+    justify-content: space-between;
+  }
+  #footer-links {
+    grid-template-columns: repeat(4, 1fr);
+    width: 50%;
+  }
+  #right-footer {
+    width: 40%;
+    padding: var(--padding-main);
+  }
 }

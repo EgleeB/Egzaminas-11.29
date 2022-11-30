@@ -185,10 +185,9 @@ button:hover {
   flex-direction: row;
   justify-content: space-between;
   padding: var(--padding-main);
-  background-image: url(./assets/upsell-footer-image.svg);
-  background-size: 40%;
-  background-position: right;
-  background-repeat: no-repeat;
+}
+#section-about-last img {
+  width: 50%;
 }
 
 /* FOOTER */

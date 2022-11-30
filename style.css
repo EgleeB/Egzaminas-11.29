@@ -147,24 +147,29 @@ button:hover {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-table th:first-child {
+.section-card table th:first-child {
   color: orange;
   font-size: 0.5rem;
 }
-table th:nth-child(2) {
+.section-card table th:nth-child(2) {
   color: rgb(77, 74, 74);
   font-size: 0.5rem;
 }
-table tr:nth-of-type(3) td:first-child,
-tr:nth-of-type(3) td:nth-child(2) {
+
+.section-card table tr:nth-of-type(2) td:nth-child(2)::before {
+  content: url(./assets/eth.svg);
+}
+
+.section-card table tr:nth-of-type(3) td:first-child,
+.section-card tr:nth-of-type(3) td:nth-child(2) {
   font-size: 0.8rem;
   color: rgb(163, 162, 162);
 }
-table {
+.section-card table {
   border-spacing: 40px 0;
   border-collapse: separate;
 }
-td {
+.section-card td {
   padding: 10px 0;
 }
 #line {
@@ -184,4 +189,44 @@ td {
   background-size: 40%;
   background-position: right;
   background-repeat: no-repeat;
+}
+
+/* FOOTER */
+
+#social-media-img {
+  padding: var(--padding-main);
+}
+#social-media p {
+  padding: var(--padding-main);
+  color: gray;
+}
+.social-media {
+  padding: var(--padding-main);
+}
+#footer-links {
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 20% 1%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: row;
+  padding: var(--padding-main);
+  justify-items: start;
+}
+.link li {
+  list-style-type: none;
+}
+.link li a {
+  text-decoration: none;
+  color: grey;
+}
+.link li span {
+  font-weight: bold;
+  color: gray;
+}
+em {
+  padding: var(--padding-main);
+  color: grey;
+  text-decoration: none;
+  font-style: normal;
 }

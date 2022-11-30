@@ -4,8 +4,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 :root {
-  --font-family-main: Arial, Helvetica, sans-serif;
   --font-color: rgb(236, 114, 134);
+  --font-color-secondary: rgb(149, 149, 149);
   --padding-main: 5% 10%;
 }
 
@@ -29,7 +29,6 @@ header img {
 #menu-links a {
   text-decoration: none;
   color: black;
-  font-family: var(--font-family-main);
 }
 #menu-links a:nth-child(4) {
   color: var(--font-color);
@@ -39,7 +38,6 @@ header img {
 
 #section-about {
   height: 400px;
-  font-family: var(--font-family-main);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -68,11 +66,12 @@ header img {
 }
 button {
   border-radius: 20px;
-  width: 100px;
+  width: 150px;
   background-color: white;
-  height: 30px;
+  height: 50px;
   border: 3px solid rgb(42, 82, 148);
   color: black;
+  font-size: 15px;
 }
 button:hover {
   cursor: pointer;
@@ -83,8 +82,8 @@ button:hover {
 #section-second {
   background-image: linear-gradient(
     to right,
-    rgb(131, 218, 240),
-    rgb(43, 58, 121)
+    rgb(217, 51, 51),
+    rgb(112, 234, 82)
   );
   padding: 10% 10%;
   display: flex;
@@ -129,10 +128,10 @@ button:hover {
 }
 .auction-info p:nth-child(2) {
   font-size: 1rem;
-  color: grey;
+  color: var(--font-color-secondary);
 }
 .opensea {
-  color: grey;
+  color: var(--font-color-secondary);
 }
 #auction-cards {
   display: flex;
@@ -152,7 +151,7 @@ button:hover {
   font-size: 0.5rem;
 }
 .section-card table th:nth-child(2) {
-  color: rgb(77, 74, 74);
+  color: var(--font-color-secondary);
   font-size: 0.5rem;
 }
 
@@ -163,7 +162,7 @@ button:hover {
 .section-card table tr:nth-of-type(3) td:first-child,
 .section-card tr:nth-of-type(3) td:nth-child(2) {
   font-size: 0.8rem;
-  color: rgb(163, 162, 162);
+  color: var(--font-color-secondary);
 }
 .section-card table {
   border-spacing: 40px 0;
@@ -174,13 +173,14 @@ button:hover {
 }
 #line {
   background-color: rgb(181, 178, 178);
-  height: 2px;
-  width: 100%;
+  height: 1px;
+  width: 89%;
   margin: 0 auto;
+
+  /*SECOND INFO SECTION*/
 }
 #section-about-last {
   height: 400px;
-  font-family: var(--font-family-main);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -194,39 +194,82 @@ button:hover {
 /* FOOTER */
 
 #social-media-img {
-  padding: var(--padding-main);
+  min-height: 100%;
+  padding-left: 10%;
+  padding-top: 5%;
 }
 #social-media p {
-  padding: var(--padding-main);
-  color: gray;
+  padding-left: 10%;
+  padding-top: 2%;
+  color: var(--font-color-secondary);
 }
 .social-media {
-  padding: var(--padding-main);
+  padding-left: 10%;
+  padding-top: 2%;
 }
 #footer-links {
   margin: 0 auto;
   display: grid;
-  grid-gap: 20% 1%;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-auto-flow: row;
   padding: var(--padding-main);
+
   justify-items: start;
 }
 .link li {
   list-style-type: none;
+  display: block;
+  line-height: 3em;
 }
 .link li a {
   text-decoration: none;
-  color: grey;
+  color: var(--font-color-secondary);
 }
 .link li span {
   font-weight: bold;
-  color: gray;
+  color: var(--font-color-secondary);
 }
 em {
   padding: var(--padding-main);
-  color: grey;
+  color: var(--font-color-secondary);
   text-decoration: none;
   font-style: normal;
+}
+@media only screen and (min-width: 992px) {
+  #section-about {
+    background-size: 50%;
+  }
+
+  #about-info p {
+    font-size: 1rem;
+  }
+
+  #about-info h1 {
+    font-size: 3rem;
+  }
+
+  /* SECOND SECTION */
+
+  #section-second {
+    border-radius: 40px;
+    margin: 5%;
+  }
+  #section-second p:first-child {
+    font-size: 2.5rem;
+  }
+
+  #section-images {
+    display: flex;
+    justify-content: center;
+  }
+
+  #section-images img:nth-child(5) {
+    display: flex;
+  }
+
+  /*SECOND INFO SECTION*/
+}
+#section-about-last {
+  background-size: 20%;
 }
